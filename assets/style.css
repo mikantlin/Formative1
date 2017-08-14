@@ -5,33 +5,45 @@ body {
 h1 {
   color: #F2BE22;
   font-family: "Alfa Slab One", cursive;
-  text-transform: uppercase;
-  font-size: 3.5em;
-  text-shadow: 4px 5px 0px #0D0D0D, 8px 8px 0px #8C0303; }
+  text-transform: uppercase; }
 
 blockquote {
   border: none;
-  padding: 0;
-  font-family: "Rock Salt", cursive;
-  font-size: 3em;
-  line-height: 1.2;
-  text-align: center;
-  -webkit-transform: rotate(-3deg);
-          transform: rotate(-3deg); }
+  padding: 0; }
 
 .section {
   height: 100vh;
   overflow: hidden; }
 
 .hero {
+  background-color: #8C0303;
   background-image: url("tarantino.png");
+  background-blend-mode: soft-light;
   background-repeat: no-repeat;
   background-position: right top; }
   .hero .container {
-    padding-top: 10em;
+    padding-top: 5em;
     height: 100vh; }
+    @media (min-width: 48em) {
+      .hero .container {
+        padding-top: 10em; } }
   .hero__header {
-    font-size: 8em; }
+    font-size: 3em;
+    text-align: center;
+    text-shadow: 4px 5px 0px #400101, 10px 11px 0px #0D0D0D; }
+    @media (min-width: 48em) {
+      .hero__header {
+        font-size: 5em; } }
+    @media (min-width: 62em) {
+      .hero__header {
+        font-size: 8em; } }
+  .hero__quote {
+    font-family: "Rock Salt", cursive;
+    font-size: 2.5em;
+    line-height: 1.2;
+    text-align: center;
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg); }
 
 [class^='col-'] {
   margin-bottom: 1em; }

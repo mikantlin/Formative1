@@ -1,12 +1,49 @@
-// colours
+// Colours
 $yellow: #F2BE22;
 $gold: #735A10;
 $red: #8C0303;
 $darkRed: #400101;
 $grey: #0D0D0D;
 
+// Fonts
 $font-header: 'Alfa Slab One', cursive;
 $font-subheader: 'Rock Salt', cursive;
+
+// Mixins
+
+@mixin on($displayType) {
+  $breakpoint: null;
+
+  @if ($displayType == tablet) {
+    $breakpoint: 48em;
+  } @else if ($displayType == desktop) {
+    $breakpoint: 62em;
+  } @else if ($displayType == largeDesktop) {
+    $breakpoint: 75em;
+  } 
+
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin medDesktop {
+  @media (min-width: $medDesktop) {
+    @content;
+  }
+}
+
+@mixin lrgDesktop {
+  @media (min-width: $lrgDesktop) {
+    @content;
+  }
+}
 
 body {
   background-color: $grey;
@@ -18,20 +55,12 @@ h1 {
 
   font-family: $font-header;
   text-transform: uppercase;
-  font-size: 3.5em;
-  text-shadow: 4px 5px 0px $grey, 8px 8px 0px $red;
 }
 
 blockquote {
   border: none;
   padding: 0;
 
-  font-family: $font-subheader;
-  font-size: 3em;
-  line-height: 1.2;
-  text-align: center;
-
-  transform: rotate(-3deg);
 }
 
 .section {
@@ -40,17 +69,42 @@ blockquote {
 }
 
 .hero {
+  background-color: $red;
   background-image: url('tarantino.png');
+  background-blend-mode: soft-light;
   background-repeat: no-repeat;
   background-position: right top;
 
   .container {
-    padding-top: 10em;
+    padding-top: 5em;
     height: 100vh;
+
+    @include on(tablet) {
+      padding-top: 10em;
+    }
   }
 
   &__header {
-    font-size: 8em;
+    font-size: 3em;
+    text-align: center;
+    text-shadow: 4px 5px 0px $darkRed, 10px 11px 0px $grey;
+
+    @include on(tablet) {
+      font-size: 5em;
+    }
+
+    @include on(desktop) {
+      font-size: 8em;
+    }
+  }
+
+  &__quote {
+    font-family: $font-subheader;
+    font-size: 2.5em;
+    line-height: 1.2;
+    text-align: center;
+
+    transform: rotate(-4deg);
   }
 }
 
