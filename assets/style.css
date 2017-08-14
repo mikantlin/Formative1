@@ -11,6 +11,9 @@ blockquote {
   border: none;
   padding: 0; }
 
+[class^='col-'] {
+  margin-bottom: 1em; }
+
 .section {
   height: 100vh;
   overflow: hidden; }
@@ -44,8 +47,5 @@ blockquote {
     text-align: center;
     -webkit-transform: rotate(-4deg);
             transform: rotate(-4deg); }
-
-[class^='col-'] {
-  margin-bottom: 1em; }
 
 /*# sourceMappingURL=style.css.map */

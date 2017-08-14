@@ -10,9 +10,8 @@ $font-header: 'Alfa Slab One', cursive;
 $font-subheader: 'Rock Salt', cursive;
 
 // Mixins
-
 @mixin on($displayType) {
-  $breakpoint: null;
+  $breakpoint: 0;
 
   @if ($displayType == tablet) {
     $breakpoint: 48em;
@@ -20,31 +19,14 @@ $font-subheader: 'Rock Salt', cursive;
     $breakpoint: 62em;
   } @else if ($displayType == largeDesktop) {
     $breakpoint: 75em;
-  } 
+  }
 
   @media (min-width: $breakpoint) {
     @content;
   }
 }
 
-@mixin tablet {
-  @media (min-width: $tablet) {
-    @content;
-  }
-}
-
-@mixin medDesktop {
-  @media (min-width: $medDesktop) {
-    @content;
-  }
-}
-
-@mixin lrgDesktop {
-  @media (min-width: $lrgDesktop) {
-    @content;
-  }
-}
-
+// Base styles
 body {
   background-color: $grey;
   color: #ccc;
@@ -60,9 +42,13 @@ h1 {
 blockquote {
   border: none;
   padding: 0;
-
 }
 
+[class^='col-'] {
+  margin-bottom: 1em;
+}
+
+// Site styles
 .section {
   height: 100vh;
   overflow: hidden;
@@ -106,8 +92,4 @@ blockquote {
 
     transform: rotate(-4deg);
   }
-}
-
-[class^='col-'] {
-  margin-bottom: 1em;
 }
