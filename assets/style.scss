@@ -37,6 +37,7 @@ h1 {
 
   font-family: $font-header;
   text-transform: uppercase;
+  letter-spacing: .05em;
 }
 
 blockquote {
@@ -44,36 +45,92 @@ blockquote {
   padding: 0;
 }
 
+svg {
+  width: 100%;
+
+  background-color: lighten($grey, 10%);
+
+  @include on(tablet) {
+    height: 60vh;
+  }
+}
+
 [class^='col-'] {
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 // Site styles
 .section {
-  height: 100vh;
-  overflow: hidden;
+
+  @include on(tablet){
+    height: 100vh;
+  }
+}
+
+.dead-centered {
+  min-height: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .row {
+    flex: 1;
+  }
+}
+
+.btn {
+  margin-top: .75em;
+
+  background-color: $yellow;
+  color: $grey;
+
+  font-weight: bold;
+
+  &--center {
+    display: block;
+    width: 15em;
+    margin: auto;
+  }
+}
+
+.graphHeader {
+  fill: $yellow;
+  font-family: $font-header;
+  font-size: 2em;
+}
+
+.header-right {
+  text-align: right;
 }
 
 .hero {
-  background-color: $red;
-  background-image: url('tarantino.png');
-  background-blend-mode: soft-light;
-  background-repeat: no-repeat;
-  background-position: right top;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -10;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: $red;
+    background-image: url('tarantino2.png');
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: 75% bottom;
+
+  }
 
   .container {
-    padding-top: 5em;
     height: 100vh;
-
-    @include on(tablet) {
-      padding-top: 10em;
-    }
   }
 
   &__header {
     font-size: 3em;
     text-align: center;
-    text-shadow: 4px 5px 0px $darkRed, 10px 11px 0px $grey;
+    text-shadow: 4px 5px 0px $red, 10px 11px 0px $grey;
 
     @include on(tablet) {
       font-size: 5em;
@@ -89,7 +146,14 @@ blockquote {
     font-size: 2.5em;
     line-height: 1.2;
     text-align: center;
-
-    transform: rotate(-4deg);
   }
+}
+
+.deaths {
+  // background-color: $gold;
+
+}
+
+.swearing {
+  background-color: $darkRed;
 }

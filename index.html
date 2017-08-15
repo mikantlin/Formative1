@@ -14,82 +14,95 @@
 
   <section class="hero section">
     <div>
-      <div class="container">
+      <div class="container dead-centered">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-xs-12">
             <h1 class="hero__header">Tarantino</h1>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-md-offset-2">
+          <div class="col-xs-12">
             <blockquote class="hero__quote">Violence is one of the most fun things to&nbsp;watch.</blockquote>
-            <a href="#intro">Here's the proof</a>                    
+            <a href="#" data-scroll-to="#intro" data-scroll-speed=1000 class="btn btn--center">Here's the proof >></a>
           </div>
         </div>
       </div>
     </div>
   </section>
   <section id="intro" class="intro section">
-    <div class="container">
+    <div class="container dead-centered">
       <div class="row">
         <div class="col-xs-12">
           <h1>Intro</h1>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae commodi nemo, qui voluptates, quia quis expedita accusamus nostrum, saepe harum distinctio placeat nisi! Recusandae eligendi, eveniet nesciunt quis dolorem officia.</div>
-        <div class="col-md-4">Animi id sapiente maiores, impedit ut deleniti excepturi mollitia aliquid sequi provident, sunt vitae unde molestiae minus recusandae necessitatibus. Eos delectus quam totam numquam, voluptates officia ducimus recusandae repellat accusamus.</div>
-        <div class="col-md-4">
-          <img src="http://via.placeholder.com/350x450/ff0000/ffffff" alt="Tarantino">
+        <div class="col-xs-6 col-md-4">
+          <img class="img-responsive" src="assets/tarantino.jpg">
         </div>
-        <a href="#deaths" class="btn">Zedd's dead, baby</a>
+        <div class="col-md-4">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam ullam culpa iure officiis deserunt rerum est, minus dolorem. Nesciunt, consequuntur.</p>
+        <p>Harum sint dignissimos molestias facilis laboriosam perspiciatis cum, assumenda recusandae labore excepturi ex repudiandae unde cupiditate facere qui magni, pariatur!</p>
+        <p>Eaque maiores incidunt, voluptatum culpa eligendi distinctio consequatur voluptatem eveniet, rerum, inventore nihil laboriosam! Facilis labore, quia pariatur molestias distinctio.</p>
+        <p>Delectus perspiciatis possimus magni cum ea quis alias velit aspernatur quaerat fuga soluta, reprehenderit unde est, repellendus odit eligendi? Magni.</p>
+        </div>
+        <div class="col-md-4">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro placeat natus laudantium aspernatur facere, nostrum suscipit dolorum repudiandae accusantium ipsam?</p>
+        <p>Cupiditate qui animi est unde sint dignissimos consectetur ex, omnis delectus, ad sunt, quo quis recusandae aspernatur consequatur aut? Sunt?</p>
+        <p>Nemo obcaecati deleniti voluptate quo magnam, fuga tempore perspiciatis adipisci corporis aliquam sed ut tenetur vitae a debitis rem molestiae?</p>
+        <a href="#" data-scroll-to="#deaths" data-scroll-speed=1000 class="btn">Death by Tarantino >></a>
+        </div>
       </div>
     </div>
   </section>
   <section id="deaths" class="deaths section">
-    <div class="container">
+    <div class="container dead-centered">
       <div class="row">
-      </div>
-      <div class="row deathCounts">
+        <div class="col-xs-12 col-sm-6 deathChart">
+          <h1>Kill Bill: Vol. 1</h1>
+          <svg id="killBillV1deaths"></svg>
+        </div>
+        <div class="col-xs-12 col-sm-6 deathChart">
+          <h1>Kill Bill: Vol. 2</h1>
+          <svg id="killBillV2deaths"></svg>
+        </div>
         <div class="col-xs-12">
           <h1>Deaths</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, illo. Beatae cum quidem non at magni reiciendis, alias est perferendis.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora exercitationem cum officiis nostrum accusamus natus ratione error odio repellat vero.</p>
+          <p>Similique reiciendis sint, saepe voluptatem voluptas tempora! Dolorum quisquam hic, suscipit impedit ducimus delectus dignissimos eius repudiandae vel modi sit!</p>
+          <a href="#" data-scroll-to="#swears" data-scroll-speed=1000 class="btn">Does he look like a bitch? >></a>
         </div>
       </div>
-      <div class="row">
-        <div id="reservoirDogs" class="col-md-4">
-          <svg></svg>
-        </div>
-        <div class="col-md-4">
-          <svg></svg>
-        </div>
-        <div class="col-md-4">
-          <svg></svg>
-        </div>
-      </div>
-      <a href="#swears" class="btn">Zedd's dead, baby</a>
     </div>
   </section>
   <section id="swears" class="swearing section">
-    <div class="container">
+    <div class="container dead-centered">
       <div class="row">
-        <h1>Swearing</h1>
-      </div>
-      <div class="row swearCharts">
-        <svg class="col-md-4"></svg>
-        <svg class="col-md-4"></svg>
-        <svg class="col-md-4"></svg>
-<!--         <div class="col-md-8 swearCharts">
+        <div class="col-md-8 swearChart">
+          <svg id="deathChart"></svg>
         </div>
         <div class="col-md-4">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat assumenda debitis porro distinctio, perspiciatis, molestiae voluptatem iure quas, autem saepe qui esse minima ad omnis nobis incidunt molestias quisquam deleniti.</p>
+          <h1>Swearing</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora exercitationem cum officiis nostrum accusamus natus ratione error odio repellat vero.</p>
+          <p>Similique reiciendis sint, saepe voluptatem voluptas tempora! Dolorum quisquam hic, suscipit impedit ducimus delectus dignissimos eius repudiandae vel modi sit!</p>
+          <p>Iste dignissimos facilis esse possimus voluptatem, assumenda corrupti tempora dolor, nam natus itaque consequuntur optio corporis provident omnis facere eveniet.</p>
+          <a href="#" data-scroll-to="#moral" data-scroll-speed=1000 class="btn">What's the point? >></a>
         </div>
- -->      </div>
-      <a href="#footer">Moral of the story...</a>
+      </div>
     </div>
   </section>
-  <section class="footer section">
-    <h1>The Moral of the Story</h1>
+  <section id="moral" class="footer section">
+    <div class="container dead-centered">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1>The Point</h1>    
+        </div>
+        <div class="col-md-4">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio molestias id ratione maiores cupiditate quaerat impedit iste nulla voluptatibus earum.</p>
+          <p>Praesentium sunt quis asperiores non, culpa ex fugiat. Ea, possimus, laudantium! Ipsum obcaecati veniam qui ab, nam excepturi repellat dolorum!</p>
+          <p>Ad repellendus, placeat! Accusamus eaque doloremque in! Laboriosam, dolore illum ducimus esse porro illo, sit eos, sapiente et deleniti doloremque.</p>
+        </div>
+        <div class="col-md-8">
+          <img class="img-responsive" src="https://cdn.miramax.com/media/assets/tarantino-soundtracks.jpg" alt="Tarantino Movies">
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

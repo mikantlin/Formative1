@@ -5,35 +5,83 @@ body {
 h1 {
   color: #F2BE22;
   font-family: "Alfa Slab One", cursive;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: .05em; }
 
 blockquote {
   border: none;
   padding: 0; }
 
-[class^='col-'] {
-  margin-bottom: 1em; }
+svg {
+  width: 100%;
+  background-color: #272727; }
+  @media (min-width: 48em) {
+    svg {
+      height: 60vh; } }
 
-.section {
-  height: 100vh;
-  overflow: hidden; }
+[class^='col-'] {
+  margin-bottom: 2em; }
+
+@media (min-width: 48em) {
+  .section {
+    height: 100vh; } }
+
+.dead-centered {
+  min-height: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .dead-centered .row {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
+
+.btn {
+  margin-top: .75em;
+  background-color: #F2BE22;
+  color: #0D0D0D;
+  font-weight: bold; }
+  .btn--center {
+    display: block;
+    width: 15em;
+    margin: auto; }
+
+.graphHeader {
+  fill: #F2BE22;
+  font-family: "Alfa Slab One", cursive;
+  font-size: 2em; }
+
+.header-right {
+  text-align: right; }
 
 .hero {
-  background-color: #8C0303;
-  background-image: url("tarantino.png");
-  background-blend-mode: soft-light;
-  background-repeat: no-repeat;
-  background-position: right top; }
+  position: relative; }
+  .hero::before {
+    content: '';
+    position: absolute;
+    z-index: -10;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #8C0303;
+    background-image: url("tarantino2.png");
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: 75% bottom; }
   .hero .container {
-    padding-top: 5em;
     height: 100vh; }
-    @media (min-width: 48em) {
-      .hero .container {
-        padding-top: 10em; } }
   .hero__header {
     font-size: 3em;
     text-align: center;
-    text-shadow: 4px 5px 0px #400101, 10px 11px 0px #0D0D0D; }
+    text-shadow: 4px 5px 0px #8C0303, 10px 11px 0px #0D0D0D; }
     @media (min-width: 48em) {
       .hero__header {
         font-size: 5em; } }
@@ -44,8 +92,9 @@ blockquote {
     font-family: "Rock Salt", cursive;
     font-size: 2.5em;
     line-height: 1.2;
-    text-align: center;
-    -webkit-transform: rotate(-4deg);
-            transform: rotate(-4deg); }
+    text-align: center; }
+
+.swearing {
+  background-color: #400101; }
 
 /*# sourceMappingURL=style.css.map */
